@@ -1,0 +1,16 @@
+DELIMITER //
+CREATE PROCEDURE Authenticate( IN uname VARCHAR(40), IN pwd VARCHAR(40), OUT result INT)
+   BEGIN
+   SELECT count(1) INTO result  FROM member where username=uname AND password=pwd;
+   END //
+DELIMITER ;
+
+
+
+---------------------------------------------------------------------------------
+DELIMITER //
+CREATE PROCEDURE sp_getUser( )
+   BEGIN
+   SELECT  INTO   FROM  where ;
+   END //
+DELIMITER ;

